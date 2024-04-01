@@ -9,9 +9,10 @@ import {
 } from "@react-form-builder/components-rsuite";
 import { BiDi } from "@react-form-builder/core";
 import { BuilderView, FormBuilder } from "@react-form-builder/designer";
+import { MUILink } from "./component/muilink";
 
 const builderComponents = rSuiteComponents.map((c) => c.build());
-const builderView = new BuilderView(builderComponents)
+const builderView = new BuilderView([...builderComponents, MUILink.build()])
   .withErrorMeta(rsErrorMessage.build())
   .withTooltipMeta(rsTooltip.build())
   .withViewerWrapper(RsLocalizationWrapper)

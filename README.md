@@ -48,6 +48,8 @@ export default App;
 
 ## Creation of MUILink Component definition
 
+Trying to add Material Ui Component as a draggable component
+
 ```js
 import { Link } from "@mui/material";
 import { define, event, oneOf, string } from "@react-form-builder/core";
@@ -61,6 +63,16 @@ export const MUILink = define(Link, "MuiLink")
     href: string.named("Href").default(""),
     onClick: event,
   });
+```
+
+## Adding the Created Compnoent Definition to the form builder
+
+```js
+//...other imports
+import { MUILink } from "./component/muilink";
+
+const builderView = new BuilderView([...builderComponents, MUILink.build()]);
+//..other file contents
 ```
 
 ## Getting Started
