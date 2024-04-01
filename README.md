@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Libraries Installation
 
-    1. ```npm install @react-form-builder/core @react-form-builder/designer @react-form-builder/components-rsuite```
+    1. `npm install @react-form-builder/core @react-form-builder/designer @react-form-builder/components-rsuite`
 
 ## Getting Started
 
