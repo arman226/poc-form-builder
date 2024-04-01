@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) created for a proof of concept of an ongoing form builder tool using @react-form-builder
+
+## Libraries Installation
+
+    1. ```npm install @react-form-builder/core @react-form-builder/designer @react-form-builder/components-rsuite```
 
 ## Getting Started
 
