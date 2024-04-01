@@ -6,6 +6,36 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 npm install @react-form-builder/core @react-form-builder/designer @react-form-builder/components-rsuite
 ```
 
+## Creation of Simple Instance
+
+```js
+"use client";
+import {
+  RsLocalizationWrapper,
+  ltrCssLoader,
+  rSuiteComponents,
+  rsErrorMessage,
+  rsTooltip,
+  rtlCssLoader,
+} from "@react-form-builder/components-rsuite";
+import { BiDi } from "@react-form-builder/core";
+import { BuilderView, FormBuilder } from "@react-form-builder/designer";
+
+const builderComponents = rSuiteComponents.map((c) => c.build());
+const builderView = new BuilderView(builderComponents)
+  .withErrorMeta(rsErrorMessage.build())
+  .withTooltipMeta(rsTooltip.build())
+  .withViewerWrapper(RsLocalizationWrapper)
+  .withCssLoader(BiDi.LTR, ltrCssLoader)
+  .withCssLoader(BiDi.RTL, rtlCssLoader);
+
+function App() {
+  return <FormBuilder view={builderView} />;
+}
+
+export default App;
+```
+
 ## Getting Started
 
 First, run the development server:
