@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.14",
     "@react-form-builder/components-rsuite": "^1.0.7",
     "@react-form-builder/core": "^1.0.7",
     "@react-form-builder/designer": "^1.0.7",

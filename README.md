@@ -4,8 +4,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Libraries Installation
 
+<h1>React form builder:</h1>
+
 ```bash
 npm install @react-form-builder/core @react-form-builder/designer @react-form-builder/components-rsuite
+```
+
+<h1>Material Ui</h1>
+
+```bash
+npm install @mui/material @emotion/react @emotion/styled
 ```
 
 ## Creation of Simple Instance
@@ -36,6 +44,23 @@ function App() {
 }
 
 export default App;
+```
+
+## Creation of MUILink Component definition
+
+```js
+import { Link } from "@mui/material";
+import { define, event, oneOf, string } from "@react-form-builder/core";
+
+export const MUILink = define(Link, "MuiLink")
+  .name("Link")
+  .props({
+    children: string.named("Text").default("Link"),
+    color: oneOf("primary", "inherit", "secobdary", "success"),
+    underline: oneOf("none", "hover", "always"),
+    href: string.named("Href").default(""),
+    onClick: event,
+  });
 ```
 
 ## Getting Started
